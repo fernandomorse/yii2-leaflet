@@ -57,15 +57,15 @@ class LatLng extends Type
     }
 
     /**
-     * @return float The altitude attribute
+     * @return float The altitude
      */
     public function getAlt()
     {
-        return $this->alt;
+        return $this->_alt;
     }
 
     /**
-     * @return float The latitude attribute
+     * @return float The latitude
      */
     public function getLat()
     {
@@ -73,7 +73,7 @@ class LatLng extends Type
     }
 
     /**
-     * @return float The longitude attribute
+     * @return float The longitude
      */
     public function getLng()
     {
@@ -81,7 +81,7 @@ class LatLng extends Type
     }
 
     /**
-     * Sets the altitude attribute
+     * Sets the altitude
      *
      * @param float $value Altitude value
      */
@@ -91,7 +91,7 @@ class LatLng extends Type
     }
 
     /**
-     * Sets the latitude attribute
+     * Sets the latitude
      *
      * @param float $value Latitude value
      * @throws \yii\base\InvalidConfigException If the value is out of range
@@ -99,14 +99,14 @@ class LatLng extends Type
     public function setLat($value)
     {
         if (abs($value) > self::LAT_MAX) {
-            throw new InvalidConfigException('Invalid `lat` attribute value; [-'.(self::LAT_MAX * -1).' <= lat <= '.self::LAT_MAX.']');
+            throw new InvalidConfigException('Invalid `lat` value; [-'.(self::LAT_MAX * -1).' <= lat <= '.self::LAT_MAX.']');
         }
 
         $this->_lat = $value;
     }
 
     /**
-     * Sets the longitude attribute
+     * Sets the longitude
      *
      * @param float $value Longitude value
      * @throws \yii\base\InvalidConfigException If the value is out of range
@@ -114,7 +114,7 @@ class LatLng extends Type
     public function setLng($value)
     {
         if (abs($value) > self::LNG_MAX) {
-            throw new InvalidConfigException('Invalid `lng` attribute value; [-'.(self::LNG_MAX * -1).' <= lng <= '.self::LNG_MAX.']');
+            throw new InvalidConfigException('Invalid `lng` value; [-'.(self::LNG_MAX * -1).' <= lng <= '.self::LNG_MAX.']');
         }
 
         $this->_lng = $value;
