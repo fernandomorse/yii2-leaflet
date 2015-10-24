@@ -81,7 +81,7 @@ trait LatLngBoundsTrait
     public function setBounds($value)
     {
         if (is_array($value)) {
-            $value = array2LatLngBounds($value);
+            $value = $this->array2LatLngBounds($value);
         }
 
         if (!($value instanceof LatLngBounds)) {

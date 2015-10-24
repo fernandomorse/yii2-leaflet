@@ -54,7 +54,7 @@ trait LatLngsTrait
                     $latLngs[$i] = $this->parse($latLng);
                     continue;
                 } else {
-                    $latLngs[$i] = array2LatLng($latLng);
+                    $latLngs[$i] = $this->array2LatLng($latLng);
                 }
             }
 

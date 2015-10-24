@@ -78,7 +78,7 @@ class LatLngBounds extends Type
     public function setNortheast($value)
     {
         if (is_array($value)) {
-            $value = array2LatLng($value);
+            $value = $this->array2LatLng($value);
         }
 
         if (!($value instanceof LatLng)) {
@@ -98,7 +98,7 @@ class LatLngBounds extends Type
     public function setSouthwest($value)
     {
         if (is_array($value)) {
-            $value = array2LatLng($value);
+            $value = $this->array2LatLng($value);
         }
 
         if (!($value instanceof LatLng)) {
